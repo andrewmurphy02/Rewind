@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Andrew Murphy</title>
+    <title>REWIND: A Coding Project By Andrew Murphy</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="img/logo.png" class="d-inline-block align-text-top"
-             width="30" height="24">APP NAME</a>
+             width="30" height="24">REWIND</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,8 +53,41 @@
     </nav>
     <!-- ==== Main Section ==== -->
     <main class="flex-shrink-0">
-        <div class="container">
-
+        <div class="container mt-5">
+            <!-- makes it 1 item per row when small and two items per row when lg-->
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">
+                        REWIND: A Coding Project
+                    </h1>
+                    <h4 class="lead pb-3">
+                        There and back again. A javascript coding exercise using arrays. Write a
+                        program that displays a string in reverse.
+                    </h4>
+                </div>
+                <div class="col">
+                    <!-- border-danger is color red-->
+                    <h5 class="border-1 border-bottom border-danger">Enter A String To Reverse</h5>
+                    <form class="row gx-3 gy-2">
+                        <div class="col">
+                            <!-- Input-->
+                            <input id="userString" type="text" class="form-control" placeholder="Enter A String" aria-label="Enter A String">
+                        </div>
+                        <div class="col-12">
+                            <!-- if i choose submit it will post page back and wont execute javascript-->
+                            <button type="button" id="btnSubmit" class="btn btn-danger">Reverse Me</button>
+                        </div>
+                        <!-- sets up alert display-->
+                        <div class="alert alert-danger mt-5 invisible fade show" id="alert" role="alert">
+                            <h4 class="alert-heading">Your String Is Reversed!</h4>
+                            <hr>
+                            <p class="mb-0" id="msg">
+                                <!-- Insert a Message Here-->
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
     <!-- ==== Footer Section ==== -->
@@ -70,9 +103,8 @@
                 <div class="col d-flex align-items-center justify-content-start justify-content-lg-center"></div>
                 <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
                     <div class="row">
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></div>
+                        <div class="col social"><a href="https://www.linkedin.com/in/andrewmurphy02" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
+                        <div class="col social"><a href="https://github.com/andrewmurphy02" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -84,6 +116,10 @@
     </script>
     <!-- this loads javascript code but i can also do javascript code inside <script> -->
     <script src="js/site.js"></script>
+    <!-- makes sure the button works when clicked-->
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", getString);
+    </script>
 </body>
 
 </html>
